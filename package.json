@@ -1,0 +1,17 @@
+{
+  "name": "Aswat",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -e * app.js"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0"
+  }
+}
