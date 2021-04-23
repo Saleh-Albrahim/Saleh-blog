@@ -9,7 +9,9 @@
   "dependencies": {
     "colors": "^1.4.0",
     "ejs": "~2.6.1",
-    "express": "~4.16.1"
+    "express": "~4.16.1",
+    "mongoose": "^5.12.5",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "eslint": "^7.9.0"
