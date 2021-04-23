@@ -8,14 +8,16 @@ const errorHandler = (error, req, res, next) => {
   if (errorStatus == 500) {
     error.message = 'server error';
   }
-
+  const header = {
+    title: "Ops something went wrong",
+    body: "Error"
+  };
 
   res.status(errorStatus).render('errorView', {
     error: {
-      success: false,
       status: errorStatus,
       message: error.message
-    }
+    }, header
   });
 
 };

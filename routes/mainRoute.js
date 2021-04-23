@@ -19,9 +19,22 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-router.get('/blog/:id', (req, res, next) => {
+router.get('/blog/:id', async (req, res, next) => {
   try {
-    res.render('index');
+
+    console.log('req.params.id :>> ', req.params.id);
+    const blog = await Blog.findById(req.params.id);
+
+    // if (!blog) {
+    //   return next(new ErrorResponse("There is no blod with this id", 400));
+    // }
+
+    console.log(blog);
+    const header = {
+      title: blog.title,
+      body: `By ${blog.user}`
+    };
+    res.render('blogView', { blog, header });
   }
   catch (error) {
     return next(new ErrorResponse(error.message, 500));
