@@ -3,9 +3,15 @@ const path = require('path');
 const errorHandler = require('./middleware/error');
 const ErrorResponse = require('./utils/errorResponse');
 const connectDB = require('./config/db');
+const dotenv = require('dotenv');
 require('colors');
 
+
+// Load config
+dotenv.config({ path: './config/config.env' });
+
 const app = express();
+
 
 // Connect to mongo database
 connectDB();
