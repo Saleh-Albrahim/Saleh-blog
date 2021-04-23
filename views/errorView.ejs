@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+    <body class="body-background">
+        <div class="container width-view">
+            <div class="card shadow-lg o-hidden border-0 my-5">
+                <div class="card-body p-0 text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-5">
+                                <div class="row">
+                                    <h3 class="mx-auto">
+                                        <%= error.status %>
+                                    </h3>
+                                </div>
+                                <div class="row">
+                                    <h3 class="mx-auto">
+                                        <%= error.message %>
+                                    </h3>
+
+                                </div>
+                                <a type="button" href="/" class="btn-solid-reg btn-back">back to home page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('partials/footer') %>
+
+    </body>
+
+    </html>

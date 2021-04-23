@@ -2,8 +2,17 @@ const express = require('express');
 const router = express.Router();
 const Blog = require('../models/blog');
 
-router.get('/', (req, res, next) => {
-  res.render('index');
+Blog.createCollection();
+router.get('/', async (req, res, next) => {
+
+  const blogList = await Blog.find();
+
+  const header = {
+    title: "Saleh blog",
+    body: "Welcome to the best blog in the world !"
+  };
+
+  res.render('homeView', { blogList, header });
 });
 
 router.get('/blog/:id', (req, res, next) => {
@@ -11,6 +20,7 @@ router.get('/blog/:id', (req, res, next) => {
 });
 
 router.post('/blog', (req, res, next) => {
+  console.log(req.body);
   res.render('index');
 });
 

@@ -5,6 +5,7 @@ shortid.characters('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
 const BlogSchema = new mongoose.Schema({
   _id: {
     type: String,
+    default: shortid.generate,
     required: true
   },
   title: {
