@@ -19,7 +19,17 @@ router.get('/blog/:id', (req, res, next) => {
   res.render('index');
 });
 
-router.post('/blog', (req, res, next) => {
+router.get('/add-blog', (req, res, next) => {
+  console.log(req.body);
+  const header = {
+    title: "Add blog",
+    body: "Add new blog"
+  };
+
+  res.render('addBlogView', { header });
+});
+
+router.post('/add-blog', (req, res, next) => {
   console.log(req.body);
   res.render('index');
 });
