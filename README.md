@@ -1,7 +1,6 @@
-# Aswat
-This Project is  Strawpoll system Where 
+# Saleh Blog
 
-User can create poll and share the link and let the pepole vote
+This Project is Simple Blog system where newsletters and other informative articles can be posted by experts for the benefit of the customers.
 
 ## Getting Started
 
@@ -9,10 +8,9 @@ User can create poll and share the link and let the pepole vote
 
 Developers using this project should already have Nodejs, npm installed.
 
-#### Frontend 
+#### Frontend
 
-This Project uses ejs template  engine for the frontend 
-
+This Project uses ejs template engine for the frontend with bootstrap
 
 #### Backend Dependencies
 
@@ -24,9 +22,9 @@ npm install
 
 ## Running the appliction in Dev Mode
 
- In order to run the app in development mode use ```npm start```. You can change the script in the ```package.json``` file. 
+In order to run the app in development mode use `npm start`. You can change the script in the `package.json` file.
 
- Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.<br>
 
 ```bash
 npm run dev
@@ -34,6 +32,4 @@ npm run dev
 
 ### Application Hosted
 
-This project already has been hosted using heroku at : https://www.aswat.live
-
-
+This project already has been hosted using heroku at : https://saleh-blog-2021.herokuapp.com/
